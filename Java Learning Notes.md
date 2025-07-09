@@ -33,8 +33,8 @@ Alt + Shift + ↑	上下移动当前代码
 ### 功能单元
 Java开发的软件，功能的最小单元：方法 
 注释
-	单行注释： //
-	多行注释：/* */
+	单行注释： `//`
+	多行注释：`/* */`
 	文档注释：
 
 ### 字面量 literal
@@ -112,17 +112,17 @@ int age = 18;
 1B = 8bit
 
 ### 进制
-0B开头	二进制 97: 01100001 
-0开头	八进制 三个二进制一组 01 100 001 -> 141
-0X开头	十六进制 四个二进制一组 0110 0001 -> 61
+- 0B开头	二进制 97: 01100001 
+- 0开头	八进制 三个二进制一组 01 100 001 -> 141
+- 0X开头	十六进制 四个二进制一组 0110 0001 -> 61
 
 ### 关键字和标识符
 - class
 - public
 - static
 - void
-- if\else\while\for
-- true\false
+- if \ else \ while \ for
+- true \ false
 
 标识符：驼峰模式
 
@@ -179,5 +179,144 @@ int age = 18;
 	`逻辑异或 ^ 前后条件结果相同，就直接返回false，前后条件结果不同，才返回true`
 
 ## 程序流程控制
+- **顺序结构**
+	自上而下的执行程序
+- **分支结构**
+	if \ switch
 
+### if 分支结构
+```java
+// 单分支 if
+if (condition) {
+    // 条件为 true 时执行
+    code;
+}
+
+// 双分支 if-else
+if (condition) {
+    // 条件为 true 时执行
+    code;
+} else {
+    // 条件为 false 时执行
+    code;
+}
+
+// 多分支 if-else if-else
+if (condition1) {
+    code;
+} else if (condition2) {
+    code;
+} else if (condition3) {
+    code;
+} else {
+    // 以上条件都不满足时执行
+    code;
+}
+```
+
+### switch 分支结构
+```java
+int day = 1;
+
+switch (day) {
+    case 1:
+        System.out.println("星期一");
+        break;
+    case 2:
+        System.out.println("星期二");
+        break;
+    case 3:
+        System.out.println("星期三");
+        break;
+    case 4:
+        System.out.println("星期四");
+        break;
+    case 5:
+        System.out.println("星期五");
+        break;
+    case 6:
+    case 7:
+        System.out.println("周末");
+        break;
+    default:
+        System.out.println("无效的输入");
+}
+```
+
+> 🔹 `break` 表示跳出 `switch` 语句块，防止继续执行下面的 case  
+> 🔹 `default` 表示不匹配任何 `case` 时的处理逻辑（可选）  
+> 🔹 支持多个 `case` 合并处理，如上方的 `case 6` 和 `case 7`
+
+- **循环结构**
+	while \ for \ do while
+
+### for 循环
+```java
+// 标准 for 循环语法结构：
+for (初始化语句; 循环条件; 迭代语句) {
+    // 循环体（每次执行的代码）
+}
+
+// 示例：输出 3 次 HelloWorld
+for (int i = 0; i < 3; i++) {
+    System.out.println("HelloWorld");
+}
+```
+
+### while 循环
+```java
+// while 循环先判断条件，再执行循环体
+while (循环条件) {
+    // 循环体
+}
+
+// 示例：输出 3 次 HelloWorld
+int i = 0;
+while (i < 3) {
+    System.out.println("HelloWorld");
+    i++;
+}
+```
+
+### do...while 循环
+
+```java
+// do...while 先执行一次，再判断条件
+do {
+    // 循环体
+} while (循环条件);
+
+// 示例：输出 3 次 HelloWorld
+int i = 0;
+do {
+    System.out.println("HelloWorld");
+    i++;
+} while (i < 3);
+```
+
+> ✅ 区别总结：
+> - `for`：常用于已知循环次数
+> - `while`：先判断后执行
+> - `do...while`：至少执行一次
+
+## 数组（Array）
+- 静态初始化数组：定义数组的时候，数据就已经确定好了。
+1. `String [ ] name = {"Alex","Bob"};`
+2. `String [ ] name = new String [ ] {"Alex","Bob"};`
+
+**访问数组** 
+数组名[索引] 
+name[0] \ name [1]
+
+数组名表示第一个元素的**地址**
+
+- 动态初始化数组
+1. `String [ ] name = new String [10];`
+数据类型 [ ] 数组名 = new 数据类型 [长度]
+
+**动态初始化数组默认值**
+byte - short - char - int - long : 0
+float - double: 0.0
+boolean: false
+类 接口 数组 String: null
 

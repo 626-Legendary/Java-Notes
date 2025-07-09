@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Itheima Java.iml" filepath="$PROJECT_DIR$/Itheima Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doudizhu.game/doudizhu.game.iml" filepath="$PROJECT_DIR$/doudizhu.game/doudizhu.game.iml" />
       <module fileurl="file://$PROJECT_DIR$/health.calculator/health.calculator.iml" filepath="$PROJECT_DIR$/health.calculator/health.calculator.iml" />
     </modules>
   </component>
